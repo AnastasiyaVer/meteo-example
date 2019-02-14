@@ -36,7 +36,7 @@ public class DataMessageListener {
 
     String name = "table";
 
-    @Scheduled(fixedRate=1*60*1000)
+    @Scheduled(fixedRate=60*60*1000, initialDelay = 60*60*1000)
     public void createTable(){
         DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy_MM_dd_HH_mm");
         String localDateTime = LocalDateTime.now().format(FORMATTER);
